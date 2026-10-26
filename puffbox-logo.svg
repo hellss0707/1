@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 110" role="img" aria-labelledby="puffbox-logo-title">
+  <title id="puffbox-logo-title">PuffBox</title>
+  <defs>
+    <!-- Brand Gradients -->
+    <linearGradient id="boxGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#6b11ff" />
+    </linearGradient>
+    <linearGradient id="boxGradAccent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="50%" stop-color="#7928ca" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+    <linearGradient id="vaporGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#4facfe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#e6f7ff" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 3D Isometric Box & Vapor Cloud Icon -->
+  <g transform="translate(18, 12)">
+    <!-- Outer ambient glow ring -->
+    <circle cx="42" cy="43" r="38" fill="none" stroke="url(#boxGradPrimary)" stroke-width="2" opacity="0.25" filter="url(#neonGlow)" />
+    <circle cx="42" cy="43" r="34" fill="rgba(15, 23, 42, 0.6)" stroke="url(#boxGradPrimary)" stroke-width="1.5" stroke-dasharray="4 2" />
+
+    <!-- Isometric Box Motif -->
+    <!-- Top Face -->
+    <path d="M 42 22 L 60 31 L 42 40 L 24 31 Z" fill="url(#boxGradPrimary)" opacity="0.9" />
+    <!-- Left Face -->
+    <path d="M 24 31 L 42 40 L 42 61 L 24 52 Z" fill="url(#boxGradAccent)" opacity="0.8" />
+    <!-- Right Face -->
+    <path d="M 42 40 L 60 31 L 60 52 L 42 61 Z" fill="url(#boxGradPrimary)" opacity="0.6" />
+
+    <!-- Vapor Wisps rising from Box -->
+    <path d="M 42 22 C 38 15, 48 10, 52 6 C 55 3, 50 0, 46 1 C 41 2, 38 6, 40 10" 
+          fill="none" stroke="url(#vaporGrad)" stroke-width="3" stroke-linecap="round" filter="url(#neonGlow)" />
+    <path d="M 33 26 C 28 20, 32 14, 30 9 C 29 6, 26 5, 24 7" 
+          fill="none" stroke="url(#vaporGrad)" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+
+    <!-- Core glowing spark -->
+    <circle cx="42" cy="40" r="2.5" fill="#ffffff" filter="url(#neonGlow)" />
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="106" y="55" font-family="'Plus Jakarta Sans', 'Inter', 'Segoe UI', sans-serif" font-weight="900" font-size="34" letter-spacing="1.5" fill="url(#textGrad)" filter="url(#neonGlow)">PUFFBOX</text>
+  <text x="108" y="77" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="11" letter-spacing="4.5" fill="#00f2fe" opacity="0.95">VLADIVOSTOK • STORE</text>
+</svg>
